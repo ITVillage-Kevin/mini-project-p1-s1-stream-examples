@@ -1,0 +1,13 @@
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- 로그 패턴 설정에 %d 추가하여 날짜와 시간 표시 -->
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+</configuration>
