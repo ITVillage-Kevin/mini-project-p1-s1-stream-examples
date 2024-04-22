@@ -1,4 +1,4 @@
-package com.itvillage.section01.class01.functional_interface_examples;
+package com.itvillage.section01.class01;
 
 import lombok.extern.slf4j.Slf4j;
 
