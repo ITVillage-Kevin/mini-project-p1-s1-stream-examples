@@ -36,7 +36,7 @@ public class StreamPractice0402 {
                     List<OrderCoffee> orderCoffees = e.getValue();
                     OrderResponse orderResponse = new OrderResponse();
                     orderResponse.setOrderId(group.getOrderId());
-                    orderResponse.setMemberId(group.getMemberId());
+                    orderResponse.setUserId(group.getUserId());
                     orderResponse.setCreatedAt(group.getCreatedAt());
 
                     List<OrderCoffeeResponse> orderCoffeeResponses =

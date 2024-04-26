@@ -14,8 +14,8 @@ public class CollectionStreamExample06 {
 
         // 한 라인씩 읽으면서 처리한다.
         Stream<String> lines = Files
-//                .lines(Path.of("src/main/resources/data.txt"));
-                .lines(Path.of("src/main/resources/big_size_data.txt"));
+                .lines(Path.of("src/main/resources/data.txt"));
+//                .lines(Path.of("src/main/resources/big_size_data.txt"));
 
             lines
                 .limit(10) // ⭐ Short-circuit: 필요한 데이터만 읽고 데이터 스트림을 끊는다.

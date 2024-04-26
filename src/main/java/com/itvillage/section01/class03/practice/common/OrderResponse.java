@@ -9,7 +9,7 @@ import java.util.List;
 @Setter
 public class OrderResponse {
     private long orderId;
-    private long memberId;
+    private long userId;
     private String createdAt;
     private List<OrderCoffeeResponse> orderCoffees;
 }

@@ -39,13 +39,13 @@ public class SampleDatasource {
 
     public static final List<OrderCoffee> orderCoffees = List.of(
             new OrderCoffee(1L, 1L, "2023-01-25T16:14:28.087671300", 1L,
-                    1, "아메리카노", "Americano", 2500, "AMR"),
+                    1, "아메리카노", "Americano", 2500),
             new OrderCoffee(1L, 1L, "2023-01-25T16:14:28.087671300", 2L,
-                    2, "바닐라 라떼", "Vanilla Latte", 4500, "VNL"),
+                    2, "바닐라 라떼", "Vanilla Latte", 4500),
             new OrderCoffee(2L, 2L, "2023-01-26T16:14:28.087671300", 1L,
-                    1, "아메리카노", "Americano", 2500, "AMR"),
-            new OrderCoffee(3L, 3L, "2023-01-27T16:14:28.087671500".toString(), 1L,
-                    1, "아메리카노", "Americano", 2500, "AMR"),
+                    1, "아메리카노", "Americano", 2500),
+            new OrderCoffee(3L, 3L, "2023-01-27T16:14:28.087671500", 1L,
+                    1, "아메리카노", "Americano", 2500),
             new OrderCoffee(3L, 3L, "2023-01-27T16:14:28.087671500", 3L,
-                    2, "카라멜 라떼", "Caramel Latte", 5000, "CRL"));
+                    2, "카라멜 라떼", "Caramel Latte", 5000));
 }
