@@ -14,8 +14,9 @@ public class CollectionStreamExample05 {
 
         // ⭐ 한 라인씩 읽으면서 처리한다.
         Stream<String> lines = Files
-                .lines(Path.of("C:\\Users\\hjs68\\OneDrive\\project\\itvillage\\mini-project-01\\common-project\\mini-project-p1-preliminary-examples\\src\\main\\java\\com\\itvillage\\section01\\class03\\data.txt"));
-            lines.forEach(System.out::println);
+//                .lines(Path.of("src/main/resources/data.txt"));
+                .lines(Path.of("src/main/resources/big_size_data.txt"));
+            lines.forEach(line -> {});
 
         long end = System.currentTimeMillis();
 

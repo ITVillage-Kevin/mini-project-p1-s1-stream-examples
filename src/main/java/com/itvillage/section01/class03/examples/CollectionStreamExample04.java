@@ -15,8 +15,9 @@ public class CollectionStreamExample04 {
 
         // 파일 전체 라인을 List에 담는다.
         List<String> list = Files
-                .readAllLines(Path.of("C:\\Users\\hjs68\\OneDrive\\project\\itvillage\\mini-project-01\\common-project\\mini-project-p1-preliminary-examples\\src\\main\\java\\com\\itvillage\\section01\\class03\\data.txt"));
-        list.forEach(System.out::println);
+//                .readAllLines(Path.of("src/main/resources/data.txt"));
+                .readAllLines(Path.of("src/main/resources/big_size_data.txt"));
+        list.forEach(ling -> {});
 
         long end = System.currentTimeMillis();
 
