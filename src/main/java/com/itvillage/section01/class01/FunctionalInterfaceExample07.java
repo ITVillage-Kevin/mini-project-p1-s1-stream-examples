@@ -20,11 +20,13 @@ public class FunctionalInterfaceExample07 {
     public static void main(String[] args) {
         // 클라이언트로부터 전달 받은 토큰이라고 가정한다.
         String refreshToken = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0IHJlZnJlc2ggdG9rZW4iLCJpYXQiOjE2NzI3NTAwMjYsImV4cCI6MTY3MjgzNjQyNn0.xXu57y2uTWWw8GwPpLhTTWJs8xAM0oWC3FeRWncryJ4";
-        Predicate<String> verifyCondition = (String rToken) -> expiredToken(refreshToken);
+        Predicate<String> isExpired = (String rToken) -> expiredToken(refreshToken);
+        Predicate<String> verifyCondition = isExpired;
 
         if (enableRedis) {
             String refreshTokenFromDb = getRefreshTokenFromDb(username);
-            verifyCondition = (String rToken) -> !rToken.equals(refreshTokenFromDb) || expiredToken(rToken);
+            Predicate<String> existsFromDb = (String rToken) -> !rToken.equals(refreshTokenFromDb);
+            verifyCondition = isExpired.or(existsFromDb); // 💡 Predicate의 or()을 이용해서 더 간결하게 작성할 수 있다.
         }
 
         verifyRefreshToken(refreshToken, verifyCondition);
